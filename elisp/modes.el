@@ -8,25 +8,25 @@
 
 
 ;;--------------------------------------------------------------------------------------------------
-;; Ivy for completion
+;; Commands and Completion
 ;;--------------------------------------------------------------------------------------------------
 
 (use-package ivy
-  :config (progn
-	    ;; Enable ivy
-	    (ivy-mode 1)
-
-	    ;; Show recently killed buffers when calling `ivy-switch-buffer'
-	    (setq ivy-use-virtual-buffers t)
-	    (setq ivy-virtual-abbreviate 'abbreviate)
-	    (setq ivy-count-format "(%d/%d) ")
-
-	    ;; Do not show "./" and "../" in the `counsel-find-file' completion list
-	    (setq ivy-extra-directories nil))
+  :config
+  ;; Enable ivy
+  (ivy-mode 1)
+  ;; Show recently killed buffers when calling `ivy-switch-buffer'
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-virtual-abbreviate 'abbreviate)
+  (setq ivy-count-format "(%d/%d) ")
+  ;; Do not show "./" and "../" in the `counsel-find-file' completion list
+  (setq ivy-extra-directories nil)
   :bind ("C-x b" . ivy-switch-buffer))
 
 (use-package swiper
   :bind ("C-s" . swiper))
+
+(use-package smex)
 
 (use-package counsel
   :bind (("M-x"     . counsel-M-x)
