@@ -11,24 +11,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(add-to-list 'load-path (concat user-emacs-directory "elisp"))
+(add-to-list 'load-path "~/.emacs.d/elisp")
 
 (load-library "packages")
 (load-library "basics")
 (load-library "visual")
 (load-library "modes")
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (markdown-mode paredit company counsel molokai-theme which-key use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

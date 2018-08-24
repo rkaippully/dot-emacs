@@ -42,14 +42,37 @@
 
 
 ;;--------------------------------------------------------------------------------------------------
+;; The silver searcher
+;;--------------------------------------------------------------------------------------------------
+
+(use-package ag
+  :config (setq ag-executable "/usr/local/bin/ag"
+		ag-arguments '("--smart-case")
+		ag-reuse-buffers t))
+
+
+;;--------------------------------------------------------------------------------------------------
 ;; Projectile for project management
 ;;--------------------------------------------------------------------------------------------------
 
 (use-package projectile
-  :config (progn
-	    (projectile-mode 1)
-	    (setq projectile-completion-system 'ivy))
-  :bind-keymap ("C-c p" . projectile-command-map))
+  :config
+  (projectile-mode 1)
+  (setq projectile-completion-system 'ivy)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+
+;;--------------------------------------------------------------------------------------------------
+;; It's Magit!
+;;--------------------------------------------------------------------------------------------------
+
+(use-package magit
+  ;; Rebind key sequences
+  :bind (("C-x g"   . nil)
+	 ("C-x M-g" . nil)
+	 ("C-c M-g" . nil)
+	 ("C-c g g" . magit-status)
+	 ("C-c g d" . magit-dispatch-popup)
+	 ("C-c g f" . magit-file-popup)))
 
 
 ;;--------------------------------------------------------------------------------------------------
