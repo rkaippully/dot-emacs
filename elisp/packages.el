@@ -32,6 +32,7 @@
     paredit
     expand-region
     multiple-cursors
+    clojure
     markdown))
 
 (dolist (m all-modules)

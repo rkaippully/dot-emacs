@@ -9,7 +9,7 @@
 
 (use-package paredit
   :commands paredit-mode
-  :hook ((emacs-lisp-mode . paredit-mode)))
+  :hook (emacs-lisp-mode . paredit-mode))
 
 
 (provide 'setup-paredit)
