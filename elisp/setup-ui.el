@@ -31,6 +31,7 @@
 
 ;; enable these modes
 (dolist (mode '(global-hl-line-mode
+		column-number-mode
 		recentf-mode))
   (funcall mode 1))
 

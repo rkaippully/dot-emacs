@@ -18,8 +18,22 @@
 
 (set-language-environment "UTF-8")
 
-(defmacro bind-key-map (km key def)
-  `(define-key ,km (kbd ,key) (quote ,def)))
+
+;;================================================
+;; A minor mode that contains all key bindings
+;;================================================
+
+(defvar custom-bindings-map (make-keymap)
+  "A keymap for custom bindings.")
+
+(define-minor-mode custom-bindings-mode
+  "A mode that activates custom-bindings."
+  t nil custom-bindings-map)
+
+(custom-bindings-mode 1)
+
+(defmacro bind-custom-key (key def)
+  `(define-key custom-bindings-map (kbd ,key) (quote ,def)))
 
 
 (provide 'basics)

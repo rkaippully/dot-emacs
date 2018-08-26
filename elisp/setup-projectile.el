@@ -11,7 +11,7 @@
   :config
   (projectile-mode 1)
   (setq projectile-completion-system 'ivy)
-  (bind-key-map projectile-mode-map "C-c p" projectile-command-map))
+  (bind-custom-key "C-c p" projectile-command-map))
 
 
 (provide 'setup-projectile)

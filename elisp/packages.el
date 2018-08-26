@@ -30,6 +30,7 @@
     projectile
     magit
     paredit
+    expand-region
     multiple-cursors
     markdown))
 
