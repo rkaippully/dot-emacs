@@ -21,3 +21,20 @@
 
 ;; `ensure' that the package is installed
 (setq use-package-always-ensure t)
+
+(defconst all-modules
+  '(ui
+    ivy
+    popwin
+    ag
+    projectile
+    magit
+    paredit
+    multiple-cursors
+    markdown))
+
+(dolist (m all-modules)
+  (require (intern (concat "setup-" (symbol-name m)))))
+
+
+(provide 'packages)
