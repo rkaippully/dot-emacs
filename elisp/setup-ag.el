@@ -8,8 +8,7 @@
 
 
 (use-package ag
-  :config (setq ag-executable "/usr/local/bin/ag"
-		ag-arguments '("--smart-case")
+  :config (setq ag-arguments '("--smart-case")
 		ag-reuse-buffers t))
 
 

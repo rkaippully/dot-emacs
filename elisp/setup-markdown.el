@@ -8,7 +8,7 @@
 
 
 (defun set-markdown-command (fmt)
-  (setq markdown-command (concat "/usr/local/bin/pandoc -t html -f " fmt " --metadata pagetitle='Markdown'")))
+  (setq markdown-command (concat "pandoc -t html -f " fmt " --metadata pagetitle='Markdown'")))
 
 (defun set-markdown-mode-command ()
   (set-markdown-command "markdown"))

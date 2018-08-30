@@ -22,6 +22,10 @@
 ;; `ensure' that the package is installed
 (setq use-package-always-ensure t)
 
+(when (memq window-system '(mac ns x))
+  (use-package exec-path-from-shell
+    :init (exec-path-from-shell-initialize)))
+
 (defconst all-modules
   '(ui
     ivy
