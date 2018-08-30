@@ -5,3 +5,5 @@
 /recentf
 /smex-items
 /.mc-lists.el
+/projectile.cache
+/tramp

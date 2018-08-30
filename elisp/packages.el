@@ -32,7 +32,9 @@
     paredit
     expand-region
     multiple-cursors
+    flycheck
     clojure
+    haskell
     markdown))
 
 (dolist (m all-modules)

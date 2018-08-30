@@ -12,8 +12,8 @@
   :init (which-key-mode))
 
 ;; nice dark theme
-(use-package molokai-theme
-  :init (load-theme 'molokai t))
+(use-package subatomic-theme
+  :init (load-theme 'subatomic t))
 
 (setq
  ;; sane defaults

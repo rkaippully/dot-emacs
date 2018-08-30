@@ -17,7 +17,7 @@
   (yas-minor-mode 1))
 
 (use-package clj-refactor
-  :hook (clojure-mode-hook . enable-clj-refactor))
+  :hook (clojure-mode . enable-clj-refactor))
 
 
 (provide 'setup-clojure)
