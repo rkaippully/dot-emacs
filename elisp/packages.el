@@ -31,9 +31,10 @@
     ivy
     popwin
     ag
+    string-inflection
     projectile
     magit
-    paredit
+    parentheses
     expand-region
     multiple-cursors
     flycheck

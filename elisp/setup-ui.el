@@ -27,7 +27,7 @@
 ;;yes and no is tedious
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(set-frame-font "Source Code Pro 14")
+(set-frame-font "Source Code Pro 15")
 
 ;; enable these modes
 (dolist (mode '(global-hl-line-mode

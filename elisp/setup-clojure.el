@@ -8,8 +8,8 @@
 
 
 (use-package cider
-  :hook ((cider-repl-mode   . paredit-mode)
-	 (clojure-mode-hook . paredit-mode)))
+  :hook ((cider-repl-mode . paredit-mode)
+	 (clojure-mode    . paredit-mode)))
 
 (defun enable-clj-refactor ()
   (clj-refactor-mode 1)
@@ -17,6 +17,12 @@
   (yas-minor-mode 1))
 
 (use-package clj-refactor
+  :init
+  (setq clojure-indent-style :always-indent)
+  (setq clojure-align-forms-automatically t)
+  (define-clojure-indent
+    (-> 0)
+    (->> 0))
   :hook (clojure-mode . enable-clj-refactor))
 
 

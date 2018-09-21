@@ -7,10 +7,11 @@
 ;;
 
 
-(use-package haskell-mode)
+(use-package haskell-mode
+  :init
+  (setq haskell-stylish-on-save t))
 
-(use-package intero
-  :hook (haskell-mode . intero-mode))
-
+(use-package dante
+  :hook (haskell-mode . dante-mode))
 
 (provide 'setup-haskell)

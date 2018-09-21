@@ -17,6 +17,10 @@
 (load custom-file 'noerror)
 
 (set-language-environment "UTF-8")
+(setq-default indent-tabs-mode nil)
+
+(add-hook 'prog-mode-hook #'linum-mode)
+(add-hook 'text-mode-hook #'linum-mode)
 
 
 ;;================================================
