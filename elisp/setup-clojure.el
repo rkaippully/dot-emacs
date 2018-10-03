@@ -17,7 +17,7 @@
   (yas-minor-mode 1))
 
 (use-package clj-refactor
-  :init
+  :config
   (setq clojure-indent-style :always-indent)
   (setq clojure-align-forms-automatically t)
   (define-clojure-indent

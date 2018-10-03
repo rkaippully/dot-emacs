@@ -12,4 +12,4 @@
   (bind-custom-key "C-c C-u" string-inflection-all-cycle))
 
 
-(provide 'setup-ag)
+(provide 'setup-string-inflection)
