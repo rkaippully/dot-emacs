@@ -38,6 +38,7 @@
     expand-region
     multiple-cursors
     flycheck
+    lsp
     clojure
     haskell
     markdown))
