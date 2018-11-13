@@ -8,7 +8,8 @@
 
 
 (use-package paredit
-  :hook (emacs-lisp-mode . paredit-mode))
+  :hook ((emacs-lisp-mode . paredit-mode)
+         (paredit-mode . show-paren-mode)))
 
 (use-package rainbow-delimiters
   :hook

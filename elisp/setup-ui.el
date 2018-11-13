@@ -11,9 +11,17 @@
 (use-package which-key
   :init (which-key-mode))
 
+(set-frame-font "Source Code Pro for Powerline 15")
+
+(use-package powerline)
+
 ;; nice dark theme
-(use-package subatomic-theme
-  :init (load-theme 'subatomic t))
+(use-package moe-theme
+  :after powerline
+  :config
+  (load-theme 'moe-dark t)
+  (powerline-moe-theme)
+  (setq moe-theme-highlight-buffer-id nil))
 
 (setq
  ;; sane defaults
@@ -26,8 +34,6 @@
 
 ;;yes and no is tedious
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-(set-frame-font "Source Code Pro 15")
 
 ;; enable these modes
 (dolist (mode '(global-hl-line-mode
