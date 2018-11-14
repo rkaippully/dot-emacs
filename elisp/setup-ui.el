@@ -13,15 +13,20 @@
 
 (set-frame-font "Source Code Pro for Powerline 15")
 
-(use-package powerline)
+(use-package spaceline)
 
-;; nice dark theme
-(use-package moe-theme
-  :after powerline
+(use-package all-the-icons
+  ;; Run this as one time font installation
+  ;; (all-the-icons-install-fonts)
+  )
+
+(use-package spaceline-all-the-icons
+  :after (all-the-icons spaceline)
+  :config (spaceline-all-the-icons-theme))
+
+(use-package kaolin-themes
   :config
-  (load-theme 'moe-dark t)
-  (powerline-moe-theme)
-  (setq moe-theme-highlight-buffer-id nil))
+  (load-theme 'kaolin-ocean t))
 
 (setq
  ;; sane defaults
