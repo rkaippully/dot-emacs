@@ -12,6 +12,7 @@
   :init (which-key-mode))
 
 (set-frame-font "Source Code Pro for Powerline 15")
+(toggle-frame-fullscreen)
 
 (use-package spaceline)
 
