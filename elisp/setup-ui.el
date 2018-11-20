@@ -12,6 +12,7 @@
   :init (which-key-mode))
 
 (set-frame-font "Source Code Pro for Powerline 14")
+(toggle-frame-fullscreen)
 
 (use-package idle-highlight-mode
   :config
