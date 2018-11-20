@@ -7,21 +7,19 @@
 ;;
 
 
-;; (use-package haskell-mode
-;;   :init
-;;   (setq haskell-stylish-on-save t))
-
-;; (use-package dante
-;;   :hook (haskell-mode . dante-mode))
-
 (use-package haskell-mode
-  :init
-  (setq haskell-stylish-on-save t))
+  :custom
+  (haskell-stylish-on-save t)
+  (haskell-process-suggest-remove-import-lines t))
 
 (use-package lsp-haskell
-  :init
+  :config
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   :hook
-  (haskell-mode . lsp-haskell-enable))
+  (haskell-mode . (lambda ()
+                    (lsp-haskell-enable)
+                    (lsp-haskell-set-completion-snippets-on)
+
+                    (haskell-auto-insert-module-template))))
 
 (provide 'setup-haskell)

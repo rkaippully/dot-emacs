@@ -12,7 +12,6 @@
 (use-package lsp-ui
   :requires lsp-mode
   :hook
-  (lsp-mode . lsp-ui-mode)
-  (lsp-ui-mode . lsp-ui-peek-mode))
+  (lsp-mode . lsp-ui-mode))
 
 (provide 'setup-lsp)
