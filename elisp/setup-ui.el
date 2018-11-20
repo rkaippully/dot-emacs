@@ -63,7 +63,8 @@
 (use-package spaceline-all-the-icons
   :after (all-the-icons spaceline fancy-battery)
   :config
-  (setq spaceline-all-the-icons-separator-type 'cup)
+  (setq spaceline-all-the-icons-separator-type 'none)
+  (setq spaceline-all-the-icons-separator-scale 1.0)
   (spaceline-all-the-icons-theme)
 
   (set-face-attribute 'mode-line nil :box nil)
