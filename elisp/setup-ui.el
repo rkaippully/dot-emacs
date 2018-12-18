@@ -11,7 +11,10 @@
 (use-package which-key
   :init (which-key-mode))
 
-(set-frame-font "Source Code Pro for Powerline 14")
+(if (eq system-type 'darwin)
+  (set-frame-font "Source Code Pro for Powerline 14")
+  (set-frame-font "Source Code Pro for Powerline 13"))
+
 (toggle-frame-fullscreen)
 
 (use-package idle-highlight-mode
