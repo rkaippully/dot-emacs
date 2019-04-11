@@ -28,6 +28,7 @@
 
 (defconst all-modules
   '(ui
+    highlight
     ivy
     popwin
     ag
