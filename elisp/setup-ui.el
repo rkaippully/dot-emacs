@@ -56,24 +56,17 @@
   :config
   (fancy-battery-mode 1))
 
-(use-package spaceline)
-
-(use-package all-the-icons
-  ;; Run this as one time font installation
-  ;; (all-the-icons-install-fonts)
-  )
-
-(use-package spaceline-all-the-icons
-  :after (all-the-icons spaceline fancy-battery)
+(use-package telephone-line
   :config
-  (setq spaceline-all-the-icons-separator-type 'none)
-  (setq spaceline-all-the-icons-separator-scale 1.0)
-  (spaceline-all-the-icons-theme)
-
-  (set-face-attribute 'mode-line nil :box nil)
-  (set-face-attribute 'spaceline-highlight-face nil :weight 'semi-bold :foreground "#111111" :background "#4cb5f5")
-  (set-face-attribute 'powerline-active1 nil :weight 'semi-bold :foreground "#f0f0f0" :background "#484848")
-  (set-face-attribute 'powerline-active2 nil :background "#2b2b2b"))
-
+  (setq telephone-line-lhs
+        '((accent . (telephone-line-vc-segment
+                     telephone-line-process-segment))
+          (nil    . (telephone-line-buffer-name-segment
+                     telephone-line-buffer-modified-segment
+                     telephone-line-flycheck-segment))))
+  (setq telephone-line-rhs
+        '((nil    . (telephone-line-misc-info-segment))
+          (accent . (telephone-line-major-mode-segment))))
+  (telephone-line-mode t))
 
 (provide 'setup-ui)
