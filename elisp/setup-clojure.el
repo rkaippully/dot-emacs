@@ -17,6 +17,8 @@
   (yas-minor-mode 1)
   (put-clojure-indent '-> 0)
   (put-clojure-indent '->> 0)
+  (put-clojure-indent 'and 0)
+  (put-clojure-indent 'or 0)
   (setq emacs-lisp-docstring-fill-column nil)
   (setq fill-column 90)
   (setq clojure-docstring-fill-column 90)

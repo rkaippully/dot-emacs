@@ -56,6 +56,11 @@
   :config
   (fancy-battery-mode 1))
 
+(use-package all-the-icons
+  ;; Run this once for installation
+  ;; (all-the-icons-install-fonts)
+  )
+
 (use-package telephone-line
   :config
   (setq telephone-line-lhs
