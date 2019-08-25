@@ -42,6 +42,7 @@
     flycheck
     clojure
     haskell
+    dhall
     markdown))
 
 (dolist (m all-modules)
