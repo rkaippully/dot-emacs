@@ -47,10 +47,9 @@
 		blink-cursor-mode))
   (funcall mode 0))
 
-(use-package danneskjold-theme
+(use-package bliss-theme
   :config
-  (load-theme 'danneskjold t)
-  (set-face-background 'hl-line "#202040"))
+  (load-theme 'bliss t))
 
 (use-package fancy-battery
   :config
