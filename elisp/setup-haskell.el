@@ -12,10 +12,18 @@
   (haskell-stylish-on-save t)
   (haskell-process-suggest-remove-import-lines t))
 
-(use-package intero
-  :hook
-  (haskell-mode . (lambda ()
-                    (intero-mode)
-                    (haskell-auto-insert-module-template))))
+(use-package lsp-mode
+  :hook (haskell-mode . lsp)
+  :commands lsp)
+
+(use-package lsp-ui
+  :commands lsp-ui-mode)
+
+(use-package lsp-haskell
+  :config
+  (setq lsp-haskell-process-path-hie "ghcide")
+  (setq lsp-haskell-process-args-hie '())
+  (lsp-haskell-set-hlint-on)
+  (lsp-haskell-set-completion-snippets-on))
 
 (provide 'setup-haskell)
