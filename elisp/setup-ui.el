@@ -53,6 +53,7 @@
 
 (use-package fancy-battery
   :config
+  (setq fancy-battery-show-percentage t)
   (fancy-battery-mode 1))
 
 (use-package all-the-icons
