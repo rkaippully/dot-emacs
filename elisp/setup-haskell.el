@@ -21,8 +21,7 @@
 
 (use-package lsp-haskell
   :config
-  (setq lsp-haskell-process-path-hie "ghcide")
-  (setq lsp-haskell-process-args-hie '())
+  (setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
   (lsp-haskell-set-hlint-on)
   (lsp-haskell-set-completion-snippets-on))
 
