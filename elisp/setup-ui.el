@@ -47,10 +47,6 @@
 		blink-cursor-mode))
   (funcall mode 0))
 
-(use-package bliss-theme
-  :config
-  (load-theme 'bliss t))
-
 (use-package fancy-battery
   :config
   (setq fancy-battery-show-percentage t)
@@ -61,17 +57,13 @@
   ;; (all-the-icons-install-fonts)
   )
 
-(use-package telephone-line
+(use-package doom-themes
   :config
-  (setq telephone-line-lhs
-        '((accent . (telephone-line-vc-segment
-                     telephone-line-process-segment))
-          (nil    . (telephone-line-buffer-name-segment
-                     telephone-line-buffer-modified-segment
-                     telephone-line-flycheck-segment))))
-  (setq telephone-line-rhs
-        '((nil    . (telephone-line-misc-info-segment))
-          (accent . (telephone-line-major-mode-segment))))
-  (telephone-line-mode t))
+  (load-theme 'doom-monokai-spectrum t))
+
+(use-package doom-modeline
+  :after (doom-themes)
+  :config
+  (doom-modeline-mode 1))
 
 (provide 'setup-ui)
