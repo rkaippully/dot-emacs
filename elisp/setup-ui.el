@@ -12,7 +12,7 @@
   :init (which-key-mode))
 
 (if (eq system-type 'darwin)
-  (set-frame-font "Source Code Pro for Powerline 14")
+  (set-frame-font "Source Code Pro for Powerline 16")
   (set-frame-font "Source Code Pro for Powerline 13"))
 
 (toggle-frame-fullscreen)

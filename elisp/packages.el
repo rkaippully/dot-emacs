@@ -42,6 +42,7 @@
     flycheck
     clojure
     haskell
+    reason
     dhall
     markdown))
 
