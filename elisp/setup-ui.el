@@ -29,7 +29,9 @@
  visible-bell nil
  ring-bell-function 'ignore
  recentf-max-saved-items 100
- scroll-conservatively 100)
+ scroll-conservatively 100
+ display-time-format "%H:%M"
+ display-time-default-load-average nil)
 
 ;;yes and no is tedious
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -37,7 +39,9 @@
 ;; enable these modes
 (dolist (mode '(global-hl-line-mode
 		column-number-mode
-		recentf-mode))
+		recentf-mode
+                display-time-mode
+                display-battery-mode))
   (funcall mode 1))
 
 ;; disable these modes
@@ -46,11 +50,6 @@
 		scroll-bar-mode
 		blink-cursor-mode))
   (funcall mode 0))
-
-(use-package fancy-battery
-  :config
-  (setq fancy-battery-show-percentage t)
-  (fancy-battery-mode 1))
 
 (use-package all-the-icons
   ;; Run this once for installation
