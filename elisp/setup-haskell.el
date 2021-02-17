@@ -21,8 +21,6 @@
 
 (use-package lsp-haskell
   :config
-  (setq lsp-haskell-process-path-hie "hie-wrapper")
-  (lsp-haskell-set-hlint-on)
-  (lsp-haskell-set-completion-snippets-on))
+  (setq lsp-haskell-formatting-provider "stylish-haskell"))
 
 (provide 'setup-haskell)

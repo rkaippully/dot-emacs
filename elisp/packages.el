@@ -32,6 +32,7 @@
     highlight
     ivy
     popwin
+    chronos
     ag
     string-inflection
     projectile
