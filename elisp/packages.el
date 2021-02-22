@@ -48,7 +48,8 @@
     haskell
     reason
     dhall
-    markdown))
+    markdown
+    yaml))
 
 (dolist (m all-modules)
   (require (intern (concat "setup-" (symbol-name m)))))
