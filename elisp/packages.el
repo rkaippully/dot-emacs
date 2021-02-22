@@ -32,6 +32,7 @@
     highlight
     ivy
     popwin
+    org
     chronos
     ag
     string-inflection
