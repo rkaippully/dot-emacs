@@ -12,7 +12,8 @@
   (bind-custom-key "C-c c e" mc/edit-lines)
   (bind-custom-key "C-c c a" mc/mark-all-like-this)
   (bind-custom-key "C-c c n" mc/mark-next-like-this)
-  (bind-custom-key "C-c c p" mc/mark-previous-like-this))
+  (bind-custom-key "C-c c p" mc/mark-previous-like-this)
+  (bind-custom-key "C-c c r" mc/mark-all-in-region))
 
 
 (provide 'setup-multiple-cursors)
