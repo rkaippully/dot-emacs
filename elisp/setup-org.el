@@ -15,4 +15,17 @@
   :hook
   (org-mode . init-org-mode))
 
+(use-package org-bullets
+  :ensure t
+  :hook
+  (org-mode . org-bullets-mode))
+
+(use-package ox-reveal
+  :ensure t
+  :config
+  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js"))
+
+(use-package htmlize
+  :ensure t)
+
 (provide 'setup-org)
