@@ -9,7 +9,8 @@
 
 ;; Show key completions
 (use-package which-key
-  :init (which-key-mode))
+  :init (which-key-mode)
+  :config (setq which-key-idle-delay 1))
 
 (if (eq system-type 'darwin)
   (set-frame-font "Source Code Pro for Powerline 16")
@@ -50,6 +51,9 @@
 		scroll-bar-mode
 		blink-cursor-mode))
   (funcall mode 0))
+
+(add-hook 'prog-mode-hook #'linum-mode)
+(add-hook 'text-mode-hook #'linum-mode)
 
 (use-package all-the-icons
   ;; Run this once for installation

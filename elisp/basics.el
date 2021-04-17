@@ -19,10 +19,6 @@
 (set-language-environment "UTF-8")
 (setq-default indent-tabs-mode nil)
 
-(add-hook 'prog-mode-hook #'linum-mode)
-(add-hook 'text-mode-hook #'linum-mode)
-
-
 ;;================================================
 ;; A minor mode that contains all key bindings
 ;;================================================

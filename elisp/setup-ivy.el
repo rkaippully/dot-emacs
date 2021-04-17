@@ -17,19 +17,32 @@
   (setq ivy-count-format "(%d/%d) ")
   ;; Do not show "./" and "../" in the `counsel-find-file' completion list
   (setq ivy-extra-directories nil)
-  :bind ("C-x b" . ivy-switch-buffer))
+  :bind (("C-x b" . ivy-switch-buffer)
+         :map ivy-switch-buffer-map
+         ("C-k" . ivy-switch-buffer-kill)
+         :map ivy-reverse-i-search-map
+         ("C-k" . ivy-previous-line)
+         ("C-d" . ivy-reverse-i-search-kill)))
 
 ;; swiper for searching
 (use-package swiper
   :bind ("C-s" . swiper))
 
-;; smex for history in M-x
-(use-package smex)
-
 ;; counsel enhances ivy
 (use-package counsel
   :bind (("M-x"     . counsel-M-x)
 	 ("C-x C-f" . counsel-find-file)))
+
+(use-package all-the-icons-ivy-rich
+  :ensure t
+  :init (all-the-icons-ivy-rich-mode 1))
+
+;; Better ivy mode
+(use-package ivy-rich
+  :config (ivy-rich-mode 1))
+
+;; smex for history in M-x
+(use-package smex)
 
 ;; company for text completion in buffers
 (use-package company
