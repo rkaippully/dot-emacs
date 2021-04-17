@@ -8,6 +8,7 @@
 
 
 (use-package haskell-mode
+  :hook (haskell-mode . yas-minor-mode)
   :custom
   (haskell-stylish-on-save t)
   (haskell-process-suggest-remove-import-lines t))
