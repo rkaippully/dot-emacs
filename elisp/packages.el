@@ -25,7 +25,8 @@
 ;; `ensure' that the package is installed
 (setq use-package-always-ensure t)
 
-(when (memq window-system '(mac ns x))
+(when (and (memq window-system '(mac ns x))
+           (not (getenv "IN_NIX_SHELL")))
   (use-package exec-path-from-shell
     :init (exec-path-from-shell-initialize)))
 
