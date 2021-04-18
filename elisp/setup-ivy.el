@@ -31,10 +31,11 @@
 ;; counsel enhances ivy
 (use-package counsel
   :bind (("M-x"     . counsel-M-x)
-	 ("C-x C-f" . counsel-find-file)))
+	 ("C-x C-f" . counsel-find-file)
+         ("C-h f"   . counsel-describe-function)
+         ("C-h v"   . counsel-describe-variable)))
 
 (use-package all-the-icons-ivy-rich
-  :ensure t
   :init (all-the-icons-ivy-rich-mode 1))
 
 ;; Better ivy mode
