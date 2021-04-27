@@ -38,8 +38,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; enable these modes
-(dolist (mode '(global-hl-line-mode
-		column-number-mode
+(dolist (mode '(column-number-mode
 		recentf-mode
                 display-time-mode
                 display-battery-mode))
@@ -53,7 +52,9 @@
   (funcall mode 0))
 
 (add-hook 'prog-mode-hook #'linum-mode)
+(add-hook 'prog-mode-hook #'hl-line-mode)
 (add-hook 'text-mode-hook #'linum-mode)
+(add-hook 'text-mode-hook #'hl-line-mode)
 
 (use-package all-the-icons
   ;; Run this once for installation

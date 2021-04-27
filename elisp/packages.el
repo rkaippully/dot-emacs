@@ -50,7 +50,9 @@
     reason
     dhall
     markdown
-    yaml))
+    yaml
+    nix
+    vterm))
 
 (dolist (m all-modules)
   (require (intern (concat "setup-" (symbol-name m)))))
