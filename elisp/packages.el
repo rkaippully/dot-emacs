@@ -31,28 +31,29 @@
     :init (exec-path-from-shell-initialize)))
 
 (defconst all-modules
-  '(ui
+  '(ag
+    chronos
+    clojure
+    dhall
+    expand-region
+    flycheck
+    haskell
     highlight
     ivy
-    popwin
-    org
-    chronos
-    ag
-    string-inflection
-    projectile
     magit
-    parentheses
-    expand-region
-    multiple-cursors
-    flycheck
-    clojure
-    haskell
-    reason
-    dhall
     markdown
-    yaml
+    multiple-cursors
     nix
-    vterm))
+    org
+    parentheses
+    popwin
+    projectile
+    reason
+    string-inflection
+    terraform
+    ui
+    vterm
+    yaml))
 
 (dolist (m all-modules)
   (require (intern (concat "setup-" (symbol-name m)))))
