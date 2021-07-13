@@ -28,7 +28,9 @@
 
 (define-minor-mode custom-bindings-mode
   "A mode that activates custom-bindings."
-  t nil custom-bindings-map)
+  :init-value t
+  :lighter nil
+  :keymap custom-bindings-map)
 
 (custom-bindings-mode 1)
 

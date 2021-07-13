@@ -13,7 +13,13 @@
   :config (setq which-key-idle-delay 1))
 
 (if (eq system-type 'darwin)
-  (set-frame-font "Source Code Pro for Powerline 16")
+  (progn
+    ; Font from https://github.com/ToxicFrog/Ligaturizer
+    (set-frame-font "LigaSrc Pro 17")
+    (setq mac-control-modifier 'control)
+    (setq mac-option-modifier 'meta)
+    (setq mac-command-modifier 'super)
+    (add-hook 'prog-mode-hook #'mac-auto-operator-composition-mode))
   (set-frame-font "Source Code Pro for Powerline 13"))
 
 (toggle-frame-fullscreen)
