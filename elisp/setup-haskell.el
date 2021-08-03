@@ -24,4 +24,15 @@
   :config
   (setq lsp-haskell-formatting-provider "stylish-haskell"))
 
+(use-package treemacs)
+
+(use-package lsp-treemacs)
+
+(use-package treemacs-projectile)
+
+(use-package treemacs-icons-dired
+  :config (treemacs-icons-dired-mode))
+
+(use-package treemacs-magit)
+
 (provide 'setup-haskell)
