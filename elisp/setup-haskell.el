@@ -8,7 +8,8 @@
 
 
 (use-package haskell-mode
-  :hook (haskell-mode . yas-minor-mode)
+  :hook ((haskell-mode . yas-minor-mode)
+         (before-save . lsp-format-buffer))
   :custom
   (haskell-stylish-on-save t)
   (haskell-process-suggest-remove-import-lines t))
@@ -22,7 +23,7 @@
 
 (use-package lsp-haskell
   :config
-  (setq lsp-haskell-formatting-provider "stylish-haskell"))
+  (setq lsp-haskell-formatting-provider "fourmolu"))
 
 (use-package treemacs)
 
