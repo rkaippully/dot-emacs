@@ -31,8 +31,7 @@
     :init (exec-path-from-shell-initialize)))
 
 (defconst all-modules
-  '(ag
-    chronos
+  '(chronos
     clojure
     dhall
     expand-region
@@ -49,6 +48,7 @@
     popwin
     projectile
     reason
+    rg
     string-inflection
     terraform
     ui

@@ -21,9 +21,15 @@
 (use-package lsp-ui
   :commands lsp-ui-mode)
 
+(defun customize-haskell-lsp ()
+  (lsp-ui-doc-mode))
+
 (use-package lsp-haskell
   :config
-  (setq lsp-haskell-formatting-provider "fourmolu"))
+  (setq lsp-haskell-formatting-provider "fourmolu")
+  (setq lsp-haskell-server-path "haskell-language-server-wrapper")
+  :hook (lsp-after-initialize . customize-haskell-lsp)
+  )
 
 (use-package treemacs)
 
