@@ -9,10 +9,7 @@
 
 (use-package haskell-mode
   :hook ((haskell-mode . yas-minor-mode)
-         (before-save . lsp-format-buffer))
-  :custom
-  (haskell-stylish-on-save t)
-  (haskell-process-suggest-remove-import-lines t))
+         (before-save . lsp-format-buffer)))
 
 (use-package lsp-mode
   :hook (haskell-mode . lsp)
