@@ -6,10 +6,14 @@
 ;; haskell environment
 ;;
 
+(defcustom enable-lsp-haskell-formatting t
+  "Enable automatic formatting of haskell code on save")
 
 (use-package haskell-mode
   :hook ((haskell-mode . yas-minor-mode)
-         (before-save . lsp-format-buffer)))
+         (before-save . (lambda ()
+                          (when enable-lsp-haskell-formatting
+                            (lsp-format-buffer))))))
 
 (use-package lsp-mode
   :hook (haskell-mode . lsp)
