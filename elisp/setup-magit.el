@@ -18,7 +18,4 @@
   :config
   (setq auth-sources '("~/.config/emacs-authinfo")))
 
-(use-package forge
-  :after magit)
-
 (provide 'setup-magit)
