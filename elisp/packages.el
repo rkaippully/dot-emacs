@@ -49,6 +49,7 @@
     projectile
     reason
     rg
+    rust
     string-inflection
     terraform
     ui
