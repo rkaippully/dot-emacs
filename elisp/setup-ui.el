@@ -83,10 +83,7 @@
 (add-hook 'text-mode-hook #'linum-mode)
 (add-hook 'text-mode-hook #'hl-line-mode)
 
-(use-package all-the-icons
-  ;; Run this once for installation
-  ;; (all-the-icons-install-fonts)
-  )
+(use-package nerd-icons)
 
 (use-package doom-themes
   :config
