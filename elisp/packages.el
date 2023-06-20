@@ -45,6 +45,7 @@
     nix
     org
     parentheses
+    plantuml
     popwin
     projectile
     reason
