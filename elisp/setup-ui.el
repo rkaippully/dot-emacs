@@ -89,9 +89,11 @@
   :config
   (load-theme 'doom-monokai-spectrum t))
 
-(use-package doom-modeline
-  :after (doom-themes)
+(use-package mood-line
   :config
-  (doom-modeline-mode 1))
+  (mood-line-mode)
+  :custom
+  (mood-line-glyph-alist mood-line-glyphs-fira-code))
+
 
 (provide 'setup-ui)
