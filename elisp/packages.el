@@ -56,7 +56,8 @@
     terraform
     ui
     vterm
-    yaml))
+    yaml
+    zig))
 
 (dolist (m all-modules)
   (require (intern (concat "setup-" (symbol-name m)))))
