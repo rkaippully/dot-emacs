@@ -39,6 +39,7 @@
     haskell
     highlight
     ivy
+    lsp
     magit
     markdown
     multiple-cursors
