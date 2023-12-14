@@ -78,9 +78,9 @@
 		blink-cursor-mode))
   (funcall mode 0))
 
-(add-hook 'prog-mode-hook #'linum-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'hl-line-mode)
-(add-hook 'text-mode-hook #'linum-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'hl-line-mode)
 
 (use-package nerd-icons)
