@@ -19,7 +19,10 @@
 (use-package avy)
 
 (defun customize-haskell-lsp ()
-  (lsp-ui-doc-mode))
+  (lsp-ui-doc-mode)
+
+  (defun lsp--document-link-handle-target (url)
+    (browse-url url)))
 
 (use-package lsp-haskell
   :config
