@@ -37,5 +37,11 @@
 (defmacro bind-custom-key (key def)
   `(define-key custom-bindings-map (kbd ,key) (quote ,def)))
 
+;; Remember and restore cursor position of opened files
+(save-place-mode 1)
+
+;; Auto-refresh buffers when files change
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
 
 (provide 'basics)
