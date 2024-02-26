@@ -49,6 +49,7 @@
     plantuml
     popwin
     projectile
+    protobuf
     reason
     rg
     rust
