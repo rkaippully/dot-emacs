@@ -47,7 +47,8 @@
 
 ;; company for text completion in buffers
 (use-package company
-  :hook (prog-mode . company-mode))
+  :hook (prog-mode . company-mode)
+  :bind (("C-<tab>" . company-complete)))
 
 
 (provide 'setup-ivy)
