@@ -32,7 +32,6 @@
 
 (defconst all-modules
   '(chronos
-    clojure
     dhall
     expand-region
     flycheck
@@ -50,15 +49,12 @@
     popwin
     projectile
     protobuf
-    reason
     rg
-    rust
     string-inflection
     terraform
     ui
     vterm
-    yaml
-    zig))
+    yaml))
 
 (dolist (m all-modules)
   (require (intern (concat "setup-" (symbol-name m)))))
